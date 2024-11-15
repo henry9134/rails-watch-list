@@ -1,0 +1,71 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.cards-scroll {
+  display: flex; /* Align the cards in a row */
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-bottom: 10px; /* Optional, adds some space at the bottom */
+  scroll-snap-type: x mandatory; /* Optional, for smooth scrolling */
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  transition: transform 0.2s;
+  flex-shrink: 0; /* Prevent cards from shrinking */
+  scroll-snap-align: start; /* Optional, for snap-to behavior */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-title {
+  font-size: 1.2em;
+  margin: 0;
+  color: #333;
+}
+
+.card-title .list-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.card-title .list-link:hover {
+  color: #007bff;
+}
+
+.card-description {
+  color: #555;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
