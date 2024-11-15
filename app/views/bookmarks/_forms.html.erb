@@ -1,0 +1,7 @@
+<%= simple_form_for [@list, @bookmark] do |f| %>
+<%# you need the brackets because in order to make a new bookmark you need to go through the list page %>
+<%= f. input :comment  %>
+<%= f. association :movie %>
+<%# association since it's an id and not a column %>
+<%= f. submit 'submit' %>
+<% end %>

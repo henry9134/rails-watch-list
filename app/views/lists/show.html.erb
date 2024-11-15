@@ -1,0 +1,13 @@
+<%= simple_form_for(@list) do |f| %>
+  <%= f.input :name, placeholder: 'Add a list name' %>
+  <%= f.submit "Create", class: "btn btn-primary" %>
+<% end %>
+
+    <div class="movies-grid">
+      <% @list.movies.each do |movie| %>
+      <div class="box-poster">
+        <img class="img-poster" src="<%= movie.poster_url %>">
+        <p class="movie-path"><%= link_to movie.title, movie_path(movie) %></p>
+      </div>
+      <% end %>
+    </div>
