@@ -12,7 +12,9 @@
       <% @lists.each do |list| %>
         <div class='card-category'>
           <%= link_to list.name, list_path(list) %>
+      <% if list.photo.attached? %>
+        <%= cl_image_tag list.photo.key, crop: :fill, class: 'img-list' %>
+      <% end %>
         </div>
       <% end %>
-    </div>
 </div>
